@@ -1,10 +1,9 @@
-package replace
+package replacement
 
-import (
-	"reflect"
-)
+import "reflect"
 
-func replace(old, new interface{}) {
+// Replace replace struct value by another struct
+func Replace(old, new interface{}) {
 	if reflect.ValueOf(old).Kind() != reflect.Ptr {
 		panic("old must be a pointer to a struct")
 	}

@@ -1,4 +1,4 @@
-package replace
+package replacement
 
 import (
 	"testing"
@@ -25,7 +25,7 @@ func TestReplace(t *testing.T) {
 	}
 	value := "newuser"
 	data2.Name = &value
-	replace(&data1, &data2)
+	Replace(&data1, &data2)
 	assert.Equal(t, data1.Name, *data2.Name)
 	assert.Equal(t, data1.UserName, "user")
 	assert.Equal(t, data1.Email, "user")
