@@ -1,4 +1,4 @@
-package replacement
+package replace
 
 import "reflect"
 

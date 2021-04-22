@@ -1,7 +1,7 @@
 # vincentinttsh/replace
 
 [![Build Status](https://travis-ci.com/vincentinttsh/replace.svg?branch=master)](https://travis-ci.com/vincentinttsh/replace)
-[![codecov](https://codecov.io/gh/vincentinttsh/replace/branch/master/graph/badge.svg?token=NATJW3S1UO)](https://codecov.io/gh/vincentinttsh/replacd)
+[![codecov](https://codecov.io/gh/vincentinttsh/replace/branch/master/graph/badge.svg?token=NATJW3S1UO)](https://codecov.io/gh/vincentinttsh/replace)
 [![Go Report Card](https://goreportcard.com/badge/github.com/vincentinttsh/replace)](https://goreportcard.com/report/github.com/vincentinttsh/replace)
 [![GoDoc](https://godoc.org/github.com/vincentinttsh/replace?status.svg)](https://godoc.org/github.com/vincentinttsh/replace)
 
