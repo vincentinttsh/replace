@@ -23,5 +23,4 @@ func Replace(old, new interface{}) {
 			oldReflect.Field(i).Set(newReflect.Field(i).Elem())
 		}
 	}
-	return
 }

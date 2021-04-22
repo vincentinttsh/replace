@@ -31,3 +31,34 @@ func TestReplace(t *testing.T) {
 	assert.Equal(t, data1.Email, "user")
 	assert.Equal(t, data1.Password, "password")
 }
+
+func catchPanic(t *testing.T) {
+	if r := recover(); r == nil {
+		t.Errorf("The code did not panic")
+	}
+}
+
+func TestPanic1(t *testing.T) {
+	defer catchPanic(t)
+	var data struct{}
+	Replace(data, &data)
+}
+func TestPanic2(t *testing.T) {
+	defer catchPanic(t)
+	var data struct{}
+	Replace(&data, data)
+}
+
+func TestPanic3(t *testing.T) {
+	defer catchPanic(t)
+	var data struct{}
+	var data2 []string
+	Replace(&data2, &data)
+}
+
+func TestPanic4(t *testing.T) {
+	defer catchPanic(t)
+	var data struct{}
+	var data2 []string
+	Replace(&data, &data2)
+}
