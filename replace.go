@@ -1,6 +1,8 @@
 package replace
 
-import "reflect"
+import (
+	"reflect"
+)
 
 // Replace replace struct value by another struct
 func Replace(old, new interface{}) {
@@ -17,10 +19,12 @@ func Replace(old, new interface{}) {
 		panic("new must be a pointer to a struct")
 	}
 	oldReflect := reflect.ValueOf(old).Elem()
+	field := reflect.TypeOf(old).Elem()
 	newReflect := reflect.ValueOf(new).Elem()
-	for i, n := 0, oldReflect.NumField(); i < n; i++ {
-		if !newReflect.Field(i).IsNil() {
-			oldReflect.Field(i).Set(newReflect.Field(i).Elem())
+	for i, n := 0, field.NumField(); i < n; i++ {
+		name := field.Field(i).Name
+		if !newReflect.FieldByName(name).IsNil() {
+			oldReflect.FieldByName(name).Set(newReflect.FieldByName(name).Elem())
 		}
 	}
 }

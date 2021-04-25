@@ -18,8 +18,8 @@ func TestReplace(t *testing.T) {
 	data1.Email = "user"
 	data1.Password = "password"
 	var data2 struct {
-		Name     *string
 		UserName *string
+		Name     *string
 		Email    *string
 		Password *string
 	}
