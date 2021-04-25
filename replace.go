@@ -19,7 +19,7 @@ func Replace(old, new interface{}) {
 		panic("new must be a pointer to a struct")
 	}
 	oldReflect := reflect.ValueOf(old).Elem()
-	field := reflect.TypeOf(old).Elem()
+	field := reflect.TypeOf(new).Elem()
 	newReflect := reflect.ValueOf(new).Elem()
 	for i, n := 0, field.NumField(); i < n; i++ {
 		name := field.Field(i).Name
