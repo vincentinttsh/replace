@@ -22,9 +22,13 @@ func TestReplace(t *testing.T) {
 		Name     *string
 		Email    *string
 		Password *string
+		Tag      []*string
 	}
 	value := "newuser"
 	data2.Name = &value
+	var tag []*string
+	tag = append(tag, &value)
+	data2.Tag = tag
 	Replace(&data1, &data2)
 	assert.Equal(t, data1.Name, *data2.Name)
 	assert.Equal(t, data1.UserName, "user")
